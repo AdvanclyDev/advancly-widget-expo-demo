@@ -1,7 +1,7 @@
 import { Fragment, useState } from "react";
 import { Alert, Text, TouchableOpacity, View } from "react-native";
-import { AdvanclyWidget, advanclyProps } from "advancly-widget-react-native";
-// import { AdvanclyWidget, advanclyProps } from "./src";
+import AdvanclyWidget, { advanclyProps } from "advancly-widget-react-native";
+// import AdvanclyWidget, { advanclyProps } from "./src";
 
 export default function App() {
   const onSuccess = (response: advanclyProps.IResponse) => {
