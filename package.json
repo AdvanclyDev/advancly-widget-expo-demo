@@ -11,7 +11,7 @@
     "publish": "expo publish"
   },
   "dependencies": {
-    "advancly-widget-react-native": "^0.0.5",
+    "advancly-widget-react-native": "^0.0.6",
     "expo": "~44.0.0",
     "expo-status-bar": "~1.2.0",
     "expo-web-browser": "~10.1.0",
