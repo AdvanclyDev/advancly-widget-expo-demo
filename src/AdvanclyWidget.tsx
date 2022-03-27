@@ -1,12 +1,12 @@
 /* eslint-disable react-native/no-inline-styles */
-import React, { useState } from 'react';
-import { Modal, SafeAreaView } from 'react-native';
-import { WebView } from 'react-native-webview';
-import { Fragment, useEffect } from 'react';
-import { AdvanclyProps, RESPONSE_STATUSES } from './types';
+import React, { useState } from "react";
+import { Modal, SafeAreaView } from "react-native";
+import { WebView } from "react-native-webview";
+import { Fragment, useEffect } from "react";
+import { AdvanclyProps, RESPONSE_STATUSES } from "./types";
 
 const BASE_URL =
-  'https://advancly-borrower.test.vggdev.com/create-loan-account/';
+  "https://advancly-borrower.test.vggdev.com/create-loan-account/";
 
 const AdvanclyWidget: React.ForwardRefRenderFunction<
   React.ReactNode,
@@ -115,7 +115,7 @@ const AdvanclyWidget: React.ForwardRefRenderFunction<
               onMessage={(e) => {
                 messageReceived(e.nativeEvent?.data);
               }}
-              cacheMode={'LOAD_NO_CACHE'}
+              cacheMode={"LOAD_NO_CACHE"}
               cacheEnabled={false}
             />
           </SafeAreaView>

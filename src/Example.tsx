@@ -1,18 +1,20 @@
 /* eslint-disable react-native/no-inline-styles */
-import React, { Fragment, useState } from 'react';
-import { Text, TouchableOpacity } from 'react-native';
-import AdvanclyWidget from './AdvanclyWidget';
-import type { IResponse } from './types/index';
+import React, { Fragment, useState } from "react";
+import { Text, TouchableOpacity } from "react-native";
+import AdvanclyWidget from "./AdvanclyWidget";
+import type { IResponse } from "./types/index";
 
 export default function App() {
+  const [showModal, setShowModal] = useState(false);
   const onSuccess = (response: IResponse) => {
-    console.log('Success', JSON.stringify(response));
+    setShowModal(false);
+    console.log("Success", JSON.stringify(response));
   };
   const onCancel = (response: IResponse) => {
-    console.log('Cancel', JSON.stringify(response));
+    setShowModal(false);
+    console.log("Cancel", JSON.stringify(response));
   };
 
-  const [showModal, setShowModal] = useState(false);
   return (
     <Fragment>
       <TouchableOpacity
@@ -21,12 +23,12 @@ export default function App() {
         }}
         style={{
           marginTop: 100,
-          backgroundColor: '#377dff',
+          backgroundColor: "#377dff",
           paddingHorizontal: 20,
           paddingVertical: 10,
         }}
       >
-        <Text style={{ color: '#fff' }}>Show Widget </Text>
+        <Text style={{ color: "#fff" }}>Show Widget </Text>
       </TouchableOpacity>
 
       <AdvanclyWidget
@@ -52,14 +54,14 @@ export default function App() {
         product_code="C044"
         tenure={30}
         customStyles={{
-          buttonBackgroundColor: '#377dff',
-          buttonTextColor: '#fff',
-          acceptButtonBackgroundColor: '#377dff',
-          acceptButtonTextColor: '#fff',
-          declineButtonBackgroundColor: '#377dff',
-          declineButtonTextColor: '#fff',
-          dropdownTextColor: '#000',
-          dropdownBackgroundColor: '#fff',
+          buttonBackgroundColor: "#377dff",
+          buttonTextColor: "#fff",
+          acceptButtonBackgroundColor: "#377dff",
+          acceptButtonTextColor: "#fff",
+          declineButtonBackgroundColor: "#377dff",
+          declineButtonTextColor: "#fff",
+          dropdownTextColor: "#000",
+          dropdownBackgroundColor: "#fff",
         }}
         onSuccess={onSuccess}
         onCancel={onCancel}
