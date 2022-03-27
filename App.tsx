@@ -4,14 +4,16 @@ import AdvanclyWidget, { advanclyProps } from "advancly-widget-react-native";
 // import AdvanclyWidget, { advanclyProps } from "./src";
 
 export default function App() {
+  const [showModal, setShowModal] = useState(false);
   const onSuccess = (response: advanclyProps.IResponse) => {
+    setShowModal(false);
     Alert.alert("Success", JSON.stringify(response));
   };
   const onCancel = (response: advanclyProps.IResponse) => {
+    setShowModal(false);
     Alert.alert("Cancel", JSON.stringify(response));
   };
 
-  const [showModal, setShowModal] = useState(false);
   return (
     <Fragment>
       <View
