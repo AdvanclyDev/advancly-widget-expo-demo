@@ -1,6 +1,12 @@
 export enum RESPONSE_STATUSES {
-  SUCCESS = 'success',
-  CANCEL = 'cancel',
+  SUCCESS = "success",
+  CANCEL = "cancel",
+}
+
+export enum ENVIRONMENT {
+  TEST = "test",
+  STAGING = "staging",
+  PRODUCTION = "production",
 }
 
 export interface IResponse {
@@ -25,7 +31,7 @@ export interface AdvanclyProps {
   cac_number?: string; // For corporate borrowers, provide the CAC number
   city: string; // City of the borrower
   company_name?: string; // For corporate borrowers, provide the company name
-  customer_type: '1' | '2'; // 1 for individual, 2 for corporate
+  customer_type: "1" | "2"; // 1 for individual, 2 for corporate
   email: string; // The borrower's email address
   first_name: string; // The borrower's first name
   gender: string; // The borrower's gender
@@ -51,4 +57,5 @@ export interface AdvanclyProps {
   onSuccess: (response: IResponse) => void; // Handle the success event from the widget
   autoStart?: boolean; // Defaults to false. If set to true, the widget will automatically start
   showWidget: boolean; // Defaults to false. If set to true, the widget will come up
+  environment: ENVIRONMENT; // Defaults to test. Can be set to "staging" or "production"
 }

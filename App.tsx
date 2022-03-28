@@ -74,6 +74,7 @@ export default function App() {
         onCancel={onCancel}
         showWidget={showModal}
         autoStart={false}
+        environment={advanclyProps.ENVIRONMENT.TEST}
       />
     </Fragment>
   );

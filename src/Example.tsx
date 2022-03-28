@@ -2,7 +2,7 @@
 import React, { Fragment, useState } from "react";
 import { Text, TouchableOpacity } from "react-native";
 import AdvanclyWidget from "./AdvanclyWidget";
-import type { IResponse } from "./types/index";
+import { ENVIRONMENT, IResponse } from "./types/index";
 
 export default function App() {
   const [showModal, setShowModal] = useState(false);
@@ -67,6 +67,7 @@ export default function App() {
         onCancel={onCancel}
         showWidget={showModal}
         autoStart={false}
+        environment={ENVIRONMENT.TEST}
       />
     </Fragment>
   );
